@@ -1,7 +1,9 @@
 const express = require('express');
 
-const router = express.Router();
+const EntradaService = require('../service/entrada.service');
 
+const router = express.Router();
+const service = new EntradaService();
 router.get('/', (req, res) => {
     res.send('ruta de almacen');
 });
