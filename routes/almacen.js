@@ -16,4 +16,10 @@ router.post('/', (req, res)=>{
     });
 });
 
+router.get('/:id', (req, res)=>{
+    const { id } = req.params;
+    const product = service.findOne(id);
+    res.status(200).json(product);
+});
+
 module.exports = router;
